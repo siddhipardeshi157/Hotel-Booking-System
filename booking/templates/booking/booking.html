@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="booking-section">
+    <h2 class="section-title">Book Your Stay</h2>
+
+    {% if error %}
+        <p class="error-msg">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'create_booking' %}" class="booking-form">
+        {% csrf_token %}
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+
+        <select name="room" required>
+            <option value="">Select Room</option>
+
+            {% for room in rooms %}
+                <option value="{{ room.id }}">{{ room.name }}</option>
+            {% empty %}
+                <option value="" disabled>No rooms available</option>
+            {% endfor %}
+
+        </select>
+
+        <input type="date" name="check_in" required>
+        <input type="date" name="check_out" required>
+        <input type="number" name="number_of_rooms" placeholder="Number of Rooms" required>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+{% endblock %}

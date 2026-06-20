@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golden Tulip</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+    <div class="logo">Golden Tulip</div>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'rooms' %}">Rooms</a>
+        <a href="/booking/">Booking</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+</header>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h1 class="fade-down">Welcome To Resort Golden Tulip🌷🌴🥥</h1>
+        <p class="fade-up">Your Luxury Stay Begins Here!</p>
+        <a href="{% url 'rooms' %}">
+            <button class="btn-primary fade-up delay-1">Explore Rooms</button>
+        </a>
+    </div>
+</section>
+
+<!-- ============ GALLERY SECTION ============ -->
+<section class="gallery">
+    <h2 class="fade-up">Our Resort Gallery</h2>
+    <p class="fade-up delay-1">Discover the beauty, comfort, and luxury of our resort.</p>
+
+    <div class="gallery-grid">
+        <img class="zoom-in delay-1" src="{% static 'main/images/resort1.jpg' %}" alt="">
+        <img class="zoom-in delay-2" src="{% static 'main/images/resort2.jpg' %}" alt="">
+        <img class="zoom-in delay-3" src="{% static 'main/images/resort3.jpg' %}" alt="">
+        <img class="zoom-in delay-4" src="{% static 'main/images/resort4.jpg' %}" alt="">
+        <img class="zoom-in delay-5" src="{% static 'main/images/resort5.jpg' %}" alt="">
+        <img class="zoom-in delay-6" src="{% static 'main/images/resort6.jpg' %}" alt="">
+        <img class="zoom-in delay-7" src="{% static 'main/images/resort7.jpg' %}" alt="">
+        <img class="zoom-in delay-8" src="{% static 'main/images/resort8.jpg' %}" alt="">
+    </div>
+</section>
+
+</body>
+</html>

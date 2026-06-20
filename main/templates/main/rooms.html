@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="rooms-section">
+    <h2 class="section-title">Our Luxury Rooms</h2>
+
+    <div class="rooms-grid">
+        {% for room in rooms %}
+        <div class="room-card fade-up">
+            <img src="{{ room.image.url }}" onclick="openImage(this)">
+            <div class="room-info">
+                <h3>{{ room.name }}</h3>
+                <p>{{ room.description }}</p>
+                <p class="price">₹{{ room.price }} / night</p>
+                <a href="/booking/" class="book-btn">Book Now</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

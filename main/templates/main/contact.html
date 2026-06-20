@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Resort Golden Tulip</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Resort Golden Tulip</div>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'rooms' %}">Rooms</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-hero">
+    <h1 class="fade-down">Contact Us 📞</h1>
+    <p class="fade-up delay-1">We’d love to hear from you — reach out anytime.</p>
+</section>
+
+<section class="contact-section">
+
+    <div class="contact-cards">
+
+        <div class="contact-card fade-up delay-1">
+            <h3>📍 Address</h3>
+            <p>Golden Tulip Resort,<br>Bangkok, Thiland</p>
+        </div>
+
+        <div class="contact-card fade-up delay-2">
+            <h3>📞 Phone</h3>
+            <p>+91 94790 75444 </p>
+        </div>
+
+        <div class="contact-card fade-up delay-3">
+            <h3>📧 Email</h3>
+            <p>resortgoldentulip7@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="contact-main">
+
+        <div class="map fade-right">
+            <iframe 
+                src="https://www.google.com/maps?q=bangkok%20beach&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="contact-form fade-left">
+            <h2>Send Us a Message</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="phone" placeholder="Phone Number">
+                <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>©2026 Resort Golden Tulip. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
