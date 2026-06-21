@@ -52,3 +52,27 @@ python manage.py runserver
 ## Author
 
 Siddhi Pardeshi
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/homepage.png)
+
+### Rooms Page
+![Rooms Page](screenshots/roomspage.png)
+
+### Booking Form
+![Booking Form](screenshots/bookingform.png)
+
+### Booking Confirmation
+![Booking Confirmation](screenshots/bookingconfirmation.png)
+
+### Contact Page
+![Contact Page](screenshots/contactpage.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/admindashboard.png)
+
+### Confirmation Mail
+
+![Confirmation Mail](screenshots/confiramtionmail.jpg)
